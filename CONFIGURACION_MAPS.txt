@@ -1,0 +1,15 @@
+PARA MOSTRAR GOOGLE MAPS REAL (NO ES NECESARIO PARA RECYCLERVIEW)
+
+1) https://console.cloud.google.com/ -> abre el proyecto Google Cloud adecuado.
+2) Habilita la facturación y "Maps SDK for Android".
+3) APIs y servicios -> Credenciales -> Crear credenciales -> Clave de API.
+4) Restringe la clave: Aplicaciones Android; paquete com.example.gustto,
+   SHA-1 del certificado de depuración de cada equipo.
+   En Linux: ./gradlew :app:signingReport
+5) Crea/abre el archivo local.properties en la raíz. Android Studio agrega sdk.dir.
+   AÑADE la línea siguiente, reemplazando el ejemplo SIN comillas:
+       MAPS_API_KEY=TU_CLAVE
+6) File -> Sync Project with Gradle Files, ejecutar.
+
+No subas local.properties a GitHub (ya se excluye en .gitignore).
+No necesitas google-services.json ni Firebase.

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/cream">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Gustto · Restaurantes" android:textColor="@color/burgundy"
+            android:textStyle="bold" android:textSize="16sp" />
+        <ImageView android:layout_width="match_parent" android:layout_height="170dp"
+            android:layout_marginTop="16dp" android:src="@drawable/placeholder_food"
+            android:contentDescription="Ilustración de restaurante" />
+        <TextView android:id="@+id/det_nombre" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="22dp"
+            android:textSize="27sp" android:textStyle="bold" android:textColor="@color/ink" />
+        <TextView android:id="@+id/det_categoria" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="6dp"
+            android:textSize="15sp" android:textColor="@color/terracotta" />
+        <TextView android:id="@+id/det_descripcion" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="22dp"
+            android:textSize="16sp" android:textColor="@color/ink" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Dirección (de ejemplo)"
+            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/burgundy" />
+        <TextView android:id="@+id/det_direccion" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="6dp"
+            android:textSize="15sp" android:textColor="@color/ink" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="Horario de ejemplo"
+            android:textSize="14sp" android:textStyle="bold" android:textColor="@color/burgundy" />
+        <TextView android:id="@+id/det_horario" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="6dp"
+            android:textSize="15sp" android:textColor="@color/ink" />
+        <Button android:id="@+id/det_favorito" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="♡ Agregar a favoritos" android:textAllCaps="false" />
+        <Button android:id="@+id/det_mapa" style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Ver ubicación en Google Maps" android:textAllCaps="false" />
+        <Button android:id="@+id/det_volver" style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Volver a la lista" android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

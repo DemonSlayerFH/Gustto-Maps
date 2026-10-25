@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/cream">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="@color/burgundy"
+        android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Gustto" android:textStyle="bold" android:textSize="31sp"
+            android:textColor="@color/paper" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Descubre qué comer cerca de ti" android:textSize="14sp"
+            android:textColor="@color/paper" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/titulo_pagina" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Explora restaurantes"
+            android:textStyle="bold" android:textColor="@color/ink" android:textSize="21sp" />
+        <EditText android:id="@+id/buscador" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Buscar restaurante o comida"
+            android:singleLine="true" android:inputType="text" android:textSize="15sp" />
+        <Spinner android:id="@+id/categorias" android:layout_width="match_parent"
+            android:layout_height="45dp" android:contentDescription="Filtrar por categoría" />
+        <TextView android:id="@+id/contador" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Restaurantes de ejemplo"
+            android:textColor="@color/muted" android:textSize="12sp" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_restaurantes" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:clipToPadding="false"
+            android:paddingBottom="10dp" />
+        <TextView android:id="@+id/texto_vacio" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:padding="24dp" android:gravity="center"
+            android:text="No se encontraron restaurantes. Cambia el filtro o la búsqueda."
+            android:textSize="15sp" android:textColor="@color/muted" android:visibility="gone" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@color/paper"
+        android:padding="6dp" android:gravity="center">
+        <Button android:id="@+id/btn_inicio" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:text="Inicio"
+            android:textAllCaps="false" />
+        <Button android:id="@+id/btn_favoritos" style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Favoritos" android:textAllCaps="false" />
+        <Button android:id="@+id/btn_mapa" style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Mapa" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
